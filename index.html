@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid-19 - Daily Status</title>
+    <link rel="shortcut icon" href="/assets/img/virus.png" type="image/x-icon">
+
+    <!-- build with <3 by @aringr -->
+
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/mystyle.css">
+</head>
+<body>
+    <div class="loading">
+        <img src="/assets/img/loading.gif" alt="" width="80" height="auto">
+    </div>
+    <div class="container">
+        <div class="row header-container shadow-sm">
+            <div class="hide-watermark"></div>
+            <div class="col-12">
+                <span class="dp-block sc-data">Data Source: https://covid19.mathdro.id/api/</span>
+            </div>
+            <div class="col-8" style="margin-left: -1rem;">
+                <div id="wrapper" style="height: 200px; width: 100%;position:relative;">
+                    <div id="chartContainer" style="height: 100%; width: 100%;"></div>
+                    <div class="total" id="total">
+                        <span id="total-cases" class="dp-block val"></span>
+                        <span class="dp-block desc">Cases Reported</span>
+                    </div>
+                </div>
+            </div>
+            <div id="detail-cases" class="col-4 dp-flex-start">
+                
+            </div>
+        </div>
+        <div class="row idn-data-container shadow-sm">
+            
+        </div>
+    </div>
+    <div class="container daily-summary-container shadow">
+        
+    </div>
+    
+    
+    <script src="/assets/js/canvasjs.min.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/myscript.js"></script>
+</body>
+</html>

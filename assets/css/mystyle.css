@@ -1,0 +1,268 @@
+html, body{
+    background-color: #FFFFFF !important;
+}
+#detail-cases{
+    margin-left: -.5rem;
+    margin-top: 1rem;
+}
+.hide-watermark{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 19px;
+    width: 70px;
+    background-color: #FFFFFF;
+    z-index: 9;
+    border-bottom-left-radius: .75rem;
+}
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    visibility: hidden;
+}
+.id-country{
+    color: #000068;
+    font-weight: bold;
+    font-size: 16px;
+}
+.header-container{
+    margin: 20px 5px !important;
+    border-radius: .75rem;
+    background-color: #FFFFFF;
+    position: relative;
+}
+.header-container .sc-data{
+    margin: 1rem 0 0 0;
+}
+.last-update{
+    font-size: 12px;
+    font-weight: lighter;
+    color: rgba(49,53,59,0.68);
+}
+.canvasjs-chart-credit{
+    display: none;
+}
+.total {
+    margin: 0;    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.total .val{
+    font-size: 16px;
+    font-weight: bolder;
+    color: #000068;
+}
+.total .desc{
+    font-size: 12px;
+    font-weight: lighter;
+    color: rgba(49,53,59,0.68);
+}
+.dp-block{
+    display: block !important;
+}
+.dp-flex-start{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.dp-flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.confirmed{
+    border-left: 5px solid #F8AD1E;
+    padding-left: 7px;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.recovered{
+    border-left: 5px solid #2ABA6B;
+    padding-left: 7px;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+.deaths{
+    border-left: 5px solid #B11E31;
+    padding-left: 7px;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+.confirmed .val, .recovered .val, .deaths .val{
+    font-size: 14px;
+    font-weight: bolder;
+    color: #000068;
+
+}
+.confirmed .desc{
+    color: #F8AD1E;
+}
+.recovered .desc{
+    color: #2ABA6B;
+}
+.deaths .desc{
+    color: #B11E31;
+}
+.confirmed .desc, .recovered .desc, .deaths .desc{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.id-confirmed, .id-recovered, .id-deaths{
+    padding: .5rem 1.5rem;
+}
+
+.id-confirmed .val, .id-recovered .val, .id-deaths .val{
+    font-size: 16px;
+    font-weight: bolder;
+    color: #000068;
+}
+.id-confirmed .desc, .id-recovered .desc, .id-deaths .desc{
+    font-size: 12px;
+    font-weight: bold;
+}
+.id-confirmed .desc{
+    color: #F8AD1E;
+}
+.id-recovered .desc{
+    color: #2ABA6B;
+}
+.id-deaths .desc{
+    color: #B11E31;
+}
+.idn-data-container{
+    margin: -12px 5px 20px 5px !important;
+    border-radius: .75rem;
+    background-color: #FFFFFF;
+    padding: .5rem 1rem;
+    display: block !important;
+}
+.daily-summary-container{
+    background-color: #FFFFFF;
+    min-height: 30rem;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    padding: 1rem 1rem 0 1rem;
+}
+.line{
+    height: 5px;
+    border-radius: 2rem;
+    background-color: rgba(0,0,0,.075);
+    width: 20%;
+}
+.txt-center{
+    text-align: center;
+}
+.shadow-btm{
+    box-shadow: 0 4px 7px -1px rgba(0,0,0,.075)
+}
+.sc-data{
+    font-weight: lighter;
+    text-align: center;
+    font-size: 12px;
+    color: rgba(49,53,59,0.68);
+}
+.txt-daily{
+    padding: .75rem 1rem 1rem 1rem;
+    font-weight: 400;
+    color: #000068;
+    font-weight: bold;
+    font-size: 14px;
+}
+.daily-det-container{
+    padding: 1rem;
+}
+.daily-det-container div{
+    line-height: 1.2;
+}
+.bd-b-separator{
+    border-bottom: 2px solid rgba(0,0,0,.075);
+}
+.txt-info{
+    font-size: 12px;
+    color: rgba(49,53,59,0.68);
+}
+.dp-flex-start .val-confirmed{
+    padding: .125rem 1rem .125rem 0;
+    /* font-size: 14px; */
+    font-weight: 700;
+}
+.dp-flex-start .val-recovered{
+    padding: .125rem 1rem .125rem 0;
+    /* font-size: 14px; */
+    font-weight: 700;
+}
+.daily-recov, .daily-conf{
+    font-size: 13px;
+}
+.daily-recov{
+    color: #2ABA6B;
+}
+.daily-conf{
+    color: #F8AD1E;
+}
+.date-detail{
+    font-size: 14px;
+    font-weight: 700;
+    color: #000068;
+    margin-bottom: 7px;
+}
+.color-primary{
+    color: #000068 !important;
+}
+.color-confirmed{
+    color: #F8AD1E !important;
+}
+.fz-13{
+    font-size: 13px !important;
+}
+.mr-t-3{
+    margin-top: 3px !important;
+}
+.pd-l-nolkoma5rem{
+    padding-left: .5rem;
+}
+/* div.sticky{
+} */
+.daily-judul{
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,.075);
+    background-color: #FFFFFF;
+    z-index: 4;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+
+    .canvasjs-chart-container{
+        display: flex;
+        justify-content: center;
+    }
+    .total{
+        left: 50%;
+    }
+}
