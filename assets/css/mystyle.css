@@ -202,7 +202,12 @@ html, body{
     /* font-size: 14px; */
     font-weight: 700;
 }
-.daily-recov, .daily-conf{
+.dp-flex-start .val-deaths{
+    padding: .125rem 1rem .125rem 0;
+    /* font-size: 14px; */
+    font-weight: 700;
+}
+.daily-recov, .daily-conf, .daily-deaths{
     font-size: 13px;
 }
 .daily-recov{
@@ -210,6 +215,9 @@ html, body{
 }
 .daily-conf{
     color: #F8AD1E;
+}
+.daily-deaths{
+    color: #B11E31;
 }
 .date-detail{
     font-size: 14px;

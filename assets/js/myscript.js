@@ -34,23 +34,30 @@ function drawDailyData(adata) {
                         </div>
                     </div>`;
 
+    // recovered dari API nilainya masih 0
+    // <div class="val-recovered">
+    //     ${ cekPrevData(reorderArray[idx].recovered.total, idx+1 > reorderArray.length-1 ? 0 : reorderArray[idx+1].recovered.total) }
+
+    //     <span class="daily-recov">Recovered : ${item.recovered.total === null ? '-' : item.recovered.total}</span>
+    // </div>
+
     reorderArray.forEach((item, idx) => {
         aHtml += `<div class="row bd-b-separator">
                         <div class="col-12 daily-det-container">
                             <div class="date-detail">
-                                <span>${convertDate(item.reportDateString)}</span>
+                                <span>${convertDate(item.reportDate)}</span>
                             </div>
                             <div class="dp-flex-start">
                                 <div class="val-confirmed">
-                                    ${ cekPrevData(reorderArray[idx].totalConfirmed, idx+1 > reorderArray.length-1 ? 0 : reorderArray[idx+1].totalConfirmed) }
+                                    ${ cekPrevData(reorderArray[idx].confirmed.total, idx+1 > reorderArray.length-1 ? 0 : reorderArray[idx+1].confirmed.total) }
                                     
-                                    <span class="daily-conf">Confirmed : ${item.totalConfirmed === null ? '-' : item.totalConfirmed}</span>
+                                    <span class="daily-conf">Confirmed : ${item.confirmed.total === null ? '-' : item.confirmed.total}</span>
                                 </div>
-                                <div class="val-recovered">
-                                    ${ cekPrevData(reorderArray[idx].totalRecovered, idx+1 > reorderArray.length-1 ? 0 : reorderArray[idx+1].totalRecovered) }
+                                <div class="val-deaths">
+                                    ${ cekPrevData(reorderArray[idx].deaths.total, idx+1 > reorderArray.length-1 ? 0 : reorderArray[idx+1].deaths.total) }
 
-                                    <span class="daily-recov">Recovered : ${item.totalRecovered === null ? '-' : item.totalRecovered}</span>
-                                </div>                    
+                                    <span class="daily-deaths">Deaths : ${item.deaths.total === null ? '-' : item.deaths.total}</span>
+                                </div>                   
                             </div>
                             <div class="dp-flex-start">
                                 <span class="fz-13 color-primary">
@@ -59,7 +66,7 @@ function drawDailyData(adata) {
                                     </svg>
                                 </span>
                                 <div class="pd-l-nolkoma5rem">
-                                    <span class="txt-info"><span class="color-confirmed">${item.mainlandChina}</span> on China and <span class="color-confirmed">${item.otherLocations}</span> on the other countries</span>
+                                    <span class="txt-info"><span class="color-confirmed">${item.confirmed.china}</span> on China and <span class="color-confirmed">${item.confirmed.outsideChina}</span> on the other countries</span>
                                 </div>
                             </div>
                         </div>
