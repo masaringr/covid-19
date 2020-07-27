@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     .then(response => {
         drawHeader(response)
         getIndonesiaData("https://indonesia-covid-19.mathdro.id/api/")
-        getDailyData(response.dailySummary)
+        // getDailyData(response.dailySummary)
     })
 })
 
@@ -33,13 +33,6 @@ function drawDailyData(adata) {
                             </div>
                         </div>
                     </div>`;
-
-    // recovered dari API nilainya masih 0
-    // <div class="val-recovered">
-    //     ${ cekPrevData(reorderArray[idx].recovered.total, idx+1 > reorderArray.length-1 ? 0 : reorderArray[idx+1].recovered.total) }
-
-    //     <span class="daily-recov">Recovered : ${item.recovered.total === null ? '-' : item.recovered.total}</span>
-    // </div>
 
     reorderArray.forEach((item, idx) => {
         aHtml += `<div class="row bd-b-separator">
@@ -86,7 +79,74 @@ function getIndonesiaData(url) {
     .then(response => response.json())
     .then(response => {
         drawIndonesiaData(response)
+        getProvincesData(response.perProvinsi.json)
     })
+}
+
+function getProvincesData(url) {
+    fetch(url)
+    .then(response => response.json())
+    .then(response => {
+        drawProvincesData(response)
+    })
+    .then( hideLoading() )
+}
+
+function drawProvincesData(adata) {
+    const dailyData = document.querySelector(".provinces-summ-container")
+
+    let aHtml = `<div class="row daily-judul">
+                    <div class="col-12">
+                        <div class="dp-flex-center">
+                            <div class="line"></div>
+                        </div>
+                        <div class="dp-flex-center">
+                            <span class="txt-daily">Provinces</span>
+                        </div>
+                    </div>
+                </div>`;
+
+    adata.data.forEach((item, idx) => {
+
+        if (idx !== adata.data.length - 1) {
+            aHtml += `<div class="row">
+                        <div class="col-12">
+                            <div class="card-provinces">
+                                <div class="row">
+                                    <div class="col-3" style="display: flex; align-items: center; justify-content: center;">
+                                        <div class="txt-urutan">
+                                            <span style="font-weight: bold; font-size: 1.25rem;">${idx+1}</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-9 pl-0">
+                                        <span class="d-block font-weight-bolder" style="font-size: 1rem; color: #464E5F;">${item.provinsi}</span>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="d-flex justify-content-start">
+                                                    <div class="id-confirmed px-0 mr-5">
+                                                        <span class="dp-block val" style="font-size: .85rem">${item.kasusPosi}</span>
+                                                        <span class="dp-block desc">Confirmed</span>
+                                                    </div>
+                                                    <div class="id-recovered px-0 mr-5">
+                                                        <span class="dp-block val" style="font-size: .85rem">${item.kasusSemb}</span>
+                                                        <span class="dp-block desc">Recovered</span>
+                                                    </div> 
+                                                    <div class="id-deaths px-0 mr-5">
+                                                        <span class="dp-block val" style="font-size: .85rem">${item.kasusMeni}</span>
+                                                        <span class="dp-block desc">Deaths</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`;
+        }
+    });
+
+    dailyData.innerHTML = aHtml
 }
 
 function cekDiffData(newVal, oldVal, index) {

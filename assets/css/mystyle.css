@@ -1,6 +1,27 @@
 html, body{
     background-color: #FFFFFF !important;
 }
+.container{
+    width: 100%;
+    max-width: 480px;
+    margin: auto;
+}
+.card-provinces{
+    background-color: #f6f8f8;
+    padding: .75rem 1rem;
+    border-radius: .75rem;
+    margin: 1rem 0 .125rem;
+}
+.txt-urutan{
+    border-radius: 50%;
+    border: 2px solid #F64E60;
+    color: #F64E60;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 #detail-cases{
     margin-left: -.5rem;
     margin-top: 1rem;
@@ -25,9 +46,9 @@ html, body{
     visibility: hidden;
 }
 .id-country{
-    color: #000068;
+    color: #464E5F;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 1rem;
 }
 .header-container{
     margin: 20px 5px !important;
@@ -39,7 +60,7 @@ html, body{
     margin: 1rem 0 0 0;
 }
 .last-update{
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: lighter;
     color: rgba(49,53,59,0.68);
 }
@@ -56,12 +77,12 @@ html, body{
     text-align: center;
 }
 .total .val{
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: bolder;
-    color: #000068;
+    color: #464E5F;
 }
 .total .desc{
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: lighter;
     color: rgba(49,53,59,0.68);
 }
@@ -104,9 +125,9 @@ html, body{
     line-height: 1.2;
 }
 .confirmed .val, .recovered .val, .deaths .val{
-    font-size: 14px;
+    font-size: .95rem;
     font-weight: bolder;
-    color: #000068;
+    color: #464E5F;
 
 }
 .confirmed .desc{
@@ -119,7 +140,7 @@ html, body{
     color: #B11E31;
 }
 .confirmed .desc, .recovered .desc, .deaths .desc{
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: bold;
 }
 
@@ -128,12 +149,12 @@ html, body{
 }
 
 .id-confirmed .val, .id-recovered .val, .id-deaths .val{
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: bolder;
-    color: #000068;
+    color: #464E5F;
 }
 .id-confirmed .desc, .id-recovered .desc, .id-deaths .desc{
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: bold;
 }
 .id-confirmed .desc{
@@ -146,18 +167,21 @@ html, body{
     color: #B11E31;
 }
 .idn-data-container{
-    margin: -12px 5px 20px 5px !important;
+    margin: -.75rem 5px 20px 5px !important;
     border-radius: .75rem;
     background-color: #FFFFFF;
     padding: .5rem 1rem;
     display: block !important;
 }
-.daily-summary-container{
+.provinces-summ-container{
     background-color: #FFFFFF;
     min-height: 30rem;
     border-top-left-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
-    padding: 1rem 1rem 0 1rem;
+    padding: 1rem;
+}
+.text-dark-75{
+    color: #464E5F !important
 }
 .line{
     height: 5px;
@@ -174,15 +198,15 @@ html, body{
 .sc-data{
     font-weight: lighter;
     text-align: center;
-    font-size: 12px;
+    font-size: .75rem;
     color: rgba(49,53,59,0.68);
 }
 .txt-daily{
     padding: .75rem 1rem 1rem 1rem;
     font-weight: 400;
-    color: #000068;
+    color: #464E5F;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 1rem
 }
 .daily-det-container{
     padding: 1rem;
@@ -194,7 +218,7 @@ html, body{
     border-bottom: 2px solid rgba(0,0,0,.075);
 }
 .txt-info{
-    font-size: 12px;
+    font-size: .75rem;
     color: rgba(49,53,59,0.68);
 }
 .dp-flex-start .val-confirmed.dp-flex-start-top{
@@ -211,7 +235,7 @@ html, body{
 }
 .daily-recov, .daily-conf, .daily-deaths{
     margin: .2rem 0 0 .3rem;
-    font-size: 13px;
+    font-size: .85rem;
 }
 .daily-recov{
     color: #2ABA6B;
@@ -223,19 +247,19 @@ html, body{
     color: #B11E31;
 }
 .date-detail{
-    font-size: 14px;
+    font-size: .95rem;
     font-weight: 700;
-    color: #000068;
+    color: #464E5F;
     margin-bottom: 7px;
 }
 .color-primary{
-    color: #000068 !important;
+    color: #464E5F !important;
 }
 .color-confirmed{
     color: #F8AD1E !important;
 }
 .fz-13{
-    font-size: 13px !important;
+    font-size: .85rem !important;
 }
 .mr-t-3{
     margin-top: 3px !important;
