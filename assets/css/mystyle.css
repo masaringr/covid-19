@@ -73,6 +73,11 @@ html, body{
     justify-content: start;
     align-items: center;
 }
+.dp-flex-start-top{
+    display: flex;
+    justify-content: start;
+    align-items: top;
+}
 .dp-flex-center{
     display: flex;
     justify-content: center;
@@ -192,22 +197,20 @@ html, body{
     font-size: 12px;
     color: rgba(49,53,59,0.68);
 }
-.dp-flex-start .val-confirmed{
+.dp-flex-start .val-confirmed.dp-flex-start-top{
     padding: .125rem 1rem .125rem 0;
-    /* font-size: 14px; */
     font-weight: 700;
 }
-.dp-flex-start .val-recovered{
+.dp-flex-start .val-recovered.dp-flex-start-top{
     padding: .125rem 1rem .125rem 0;
-    /* font-size: 14px; */
     font-weight: 700;
 }
-.dp-flex-start .val-deaths{
+.dp-flex-start .val-deaths.dp-flex-start-top{
     padding: .125rem 1rem .125rem 0;
-    /* font-size: 14px; */
     font-weight: 700;
 }
 .daily-recov, .daily-conf, .daily-deaths{
+    margin: .2rem 0 0 .3rem;
     font-size: 13px;
 }
 .daily-recov{

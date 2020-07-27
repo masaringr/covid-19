@@ -48,15 +48,15 @@ function drawDailyData(adata) {
                                 <span>${convertDate(item.reportDate)}</span>
                             </div>
                             <div class="dp-flex-start">
-                                <div class="val-confirmed">
+                                <div class="val-confirmed dp-flex-start-top">
                                     ${ cekPrevData(reorderArray[idx].confirmed.total, idx+1 > reorderArray.length-1 ? 0 : reorderArray[idx+1].confirmed.total) }
                                     
-                                    <span class="daily-conf">Confirmed : ${item.confirmed.total === null ? '-' : item.confirmed.total}</span>
+                                    <span class="daily-conf">Confirmed : ${item.confirmed.total === null ? '-' : cekDiffData(item.confirmed.total, idx+1 > reorderArray.length-1 ? 0 : reorderArray[idx+1].confirmed.total, idx)}</span>
                                 </div>
-                                <div class="val-deaths">
+                                <div class="val-deaths dp-flex-start-top">
                                     ${ cekPrevData(reorderArray[idx].deaths.total, idx+1 > reorderArray.length-1 ? 0 : reorderArray[idx+1].deaths.total) }
 
-                                    <span class="daily-deaths">Deaths : ${item.deaths.total === null ? '-' : item.deaths.total}</span>
+                                    <span class="daily-deaths">Deaths : ${item.deaths.total === null ? '-' : cekDiffData(item.deaths.total, idx+1 > reorderArray.length-1 ? 0 : reorderArray[idx+1].deaths.total, idx)}</span>
                                 </div>                   
                             </div>
                             <div class="dp-flex-start">
@@ -87,6 +87,21 @@ function getIndonesiaData(url) {
     .then(response => {
         drawIndonesiaData(response)
     })
+}
+
+function cekDiffData(newVal, oldVal, index) {
+    let aNew = newVal === null ? 0 : newVal 
+    let anOld = oldVal === null ? 0 : oldVal 
+
+    if(index === 0) {
+        if(anOld > aNew) {
+            return aNew
+        } else {
+            return anOld + " + " + (aNew - anOld) + " new cases"
+        }
+    } else {
+        return aNew
+    }
 }
 
 function cekPrevData(newData, oldData) {
