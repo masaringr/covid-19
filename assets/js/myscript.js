@@ -101,7 +101,7 @@ function drawProvincesData(adata) {
                             <div class="line"></div>
                         </div>
                         <div class="dp-flex-center">
-                            <span class="txt-daily">Provinces</span>
+                            <span class="txt-daily" style="letter-spacing: 1px;">Provinces</span>
                         </div>
                     </div>
                 </div>`;
